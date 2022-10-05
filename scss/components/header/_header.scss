@@ -1,0 +1,71 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.header{
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding:size(10) size(10);
+    @include breakpoint (mobile768) {
+    padding:size(10) size(32);
+      
+    }
+    @include breakpoint (tab992) {
+        padding:size(10) size(48);
+
+    }
+    &-nav {
+        // hambyrger
+        .logo{
+            // background-color: $tertiary;
+            width: size(200);
+            h3{
+                @include font($primaryFont,32,medium,normal,36);
+            }
+        }
+        // desktop search
+        .desktop-search{
+            
+
+        }
+  
+    }
+    .searchgroup {
+        @include flex-center-vert;
+        @include w100;
+        position: relative;
+        padding: size(8) size(0);
+
+        &-input {
+            width: 100%;
+            @include breakpoint (tab992){
+                width: size(400);
+            }
+            @include font($primaryFont, 14, normal, normal, 14);
+            padding: size(10) size(16);
+            padding-left: size(30);
+            @include radius(2);
+            color: #111;
+            @include border (solid,1,$searchBorder);
+            @include transitionsall;
+            @include breakpoint(tab992){
+                padding-left: size(40);
+            }
+
+            &:focus,
+            &:hover {
+                outline: none;
+                border-color: #444;
+            }
+
+            &::placeholder {
+                color: $gray-500;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            left: size(10);
+            @include square(20);
+
+        }
+    }
+}

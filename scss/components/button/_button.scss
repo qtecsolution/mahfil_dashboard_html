@@ -1,0 +1,33 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+button, 
+[type='button'], 
+[type='reset'], 
+[type='submit'] {
+  cursor: pointer;
+  border: none;
+  @include transparent-button;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.live-btn{
+  padding: size(10) size(30);
+  display: inline-block;
+  @include border (solid,1,$gray-400);
+  @include setBgColor(transparent,$gray-700);
+  @include font($primaryFont,14,medium,normal,24);
+  @include transitionsall;
+  @include hover {
+    @include setBgColor(darken(#fff, 10%), $gray-700);
+    // border-color: transparent;
+  }
+
+}
