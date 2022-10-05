@@ -534,8 +534,14 @@ button:focus,
   border-right: 0;
   width: 17.5rem;
 }
+.offcanvas-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .offcanvas-header .logo {
-  width: 6.875rem;
+  width: 6.25rem;
+  height: 6.25rem;
 }
 .offcanvas-header .btn-close {
   border-radius: 0rem;
@@ -579,9 +585,12 @@ button:focus,
   gap: 0.5rem;
   width: 100%;
 }
+.offcanvas-body .mobilelist-item {
+  width: 100%;
+}
 .offcanvas-body .mobilelist-link {
   position: relative;
-  display: inline-block;
+  display: block;
   color: hsl(0deg, 0%, 27%);
   font-family: "Inter", sans-serif;
   font-size: 1rem;
@@ -590,8 +599,7 @@ button:focus,
   line-height: 1.5;
   overflow: hidden;
   width: 100%;
-  padding-top: 1;
-  padding-bottom: 1;
+  padding: 0.625rem;
 }
 .offcanvas-body .mobilelist-link:before, .offcanvas-body .mobilelist-link:after {
   content: "";
@@ -621,7 +629,11 @@ button:focus,
   transform: translateX(105%);
 }
 .offcanvas-body .mobilelist-link:not([disabled]):hover {
-  color: hsl(0deg, 0%, 0%);
+  background: #3898FC;
+  color: hsl(0deg, 0%, 100%);
+}
+.offcanvas-body .mobilelist-link:not([disabled]):hover svg path {
+  fill: hsl(0deg, 0%, 100%);
 }
 .offcanvas-body .mobilelist-link:not([disabled]):hover::before, .offcanvas-body .mobilelist-link:not([disabled]):hover::after {
   -webkit-transform: translateX(0);

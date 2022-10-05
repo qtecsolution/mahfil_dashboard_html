@@ -9,8 +9,10 @@
   }
 
   &-header {
+    @include flex-column;
+    justify-content: center;
     .logo {
-      width: size(110);
+      @include square(100);
     }
 
     .btn-close {
@@ -46,16 +48,19 @@
       align-items: flex-start;
       gap: size(8);
       @include w100;
+      &-item{
+        @include w100;
+      }
 
       &-link {
         position: relative;
-        display: inline-block;
+        display:block;
         color: $menuBlack;
         @include font($primaryFont, 16, medium, normal, 24);
         overflow: hidden;
         @include w100;
-        padding-top: length(2);
-        padding-bottom: length(2);
+       padding: size(10);
+ 
 
         &:before, &:after {
           content: '';
@@ -78,7 +83,12 @@
         }
 
         @include hover {
-          color: $black;
+          @include setBgColor($primary,$white);
+          svg{
+            path{
+              fill: $white;
+            }
+          }
 
           &::before,
           &::after {
