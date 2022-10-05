@@ -1,3 +1,17 @@
 @use '../global' as *;
-@use '../partials' as p;
+@use '../partials' as *;
 
+.main {
+    .sidebar{
+        background-color: $white;
+        height: 100%;
+        width: size(270);
+    }
+    .main-info{
+        padding: size(20) size(20);
+        @include w100;
+        @include breakpoint(tab992){
+            width: calc(100% - 280px);
+        }
+    }
+}

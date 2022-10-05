@@ -1,0 +1,17 @@
+
+@use '../../global' as *;
+@use '../../partials' as *;
+.sidebar {
+    padding: size(10) size(20);
+}
+.sidebarlist{
+@include list-vertical;
+&-item{
+
+}
+&-link{
+    color:$gray-900 ;
+    display: inline-block;
+    padding: size(10) size(20);
+}
+}

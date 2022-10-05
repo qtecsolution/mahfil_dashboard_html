@@ -3,11 +3,16 @@
 .total-card{
     padding: size(20) size(0) size(20) size(20);
     min-width: 150px;
+    transition: all .4s ease-in-out;
+    @include hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
     .card-icon{
         @include square(42);
         background: $cardIcon-1;
         @include circle;
         @include flex-center;
+       
         
         svg{
         }

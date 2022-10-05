@@ -378,6 +378,10 @@ button:focus,
 .total-card {
   padding: 1.25rem 0rem 1.25rem 1.25rem;
   min-width: 150px;
+  transition: all 0.4s ease-in-out;
+}
+.total-card:not([disabled]):hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .total-card .card-icon {
   width: 2.625rem;
@@ -705,6 +709,38 @@ button:focus,
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
   border-radius: 0.5rem;
+}
+
+.sidebar {
+  padding: 0.625rem 1.25rem;
+}
+
+.sidebarlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.sidebarlist-link {
+  color: #1A202C;
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+}
+
+.main .sidebar {
+  background-color: hsl(0deg, 0%, 100%);
+  height: 100%;
+  width: 16.875rem;
+}
+.main .main-info {
+  padding: 1.25rem 1.25rem;
+  width: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .main .main-info {
+    width: calc(100% - 280px);
+  }
 }
 
 .cse-container {
