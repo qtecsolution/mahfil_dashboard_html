@@ -18,7 +18,12 @@
             // background-color: $tertiary;
             width: size(200);
             h3{
-                @include font($primaryFont,32,medium,normal,36);
+                @include font($primaryFont,28,medium,normal,32);
+                padding-left: size(24);
+                @include breakpoint(tab992) {
+                    padding-left: size(0);
+                    @include font($primaryFont,32,medium,normal,36);
+                }
             }
         }
         // desktop search
@@ -37,7 +42,7 @@
         &-input {
             width: 100%;
             @include breakpoint (tab992){
-                width: size(400);
+                width: size(340);
             }
             @include font($primaryFont, 14, normal, normal, 14);
             padding: size(10) size(16);
@@ -67,5 +72,26 @@
             @include square(20);
 
         }
+    }
+}
+
+.user-image{
+    @include square(30);
+    @include breakpoint(mobile768) {
+        @include square(35);
+    }
+    @include breakpoint(tab992) {
+        @include square(40);
+    }
+    @include breakpoint(desktop1024) {
+        @include square(50);
+    }
+    @include breakpoint(desktop1100) {
+        @include square(50);
+    }
+    img{
+        @include wh100;
+        object-fit: cover;
+        @include circle;
     }
 }

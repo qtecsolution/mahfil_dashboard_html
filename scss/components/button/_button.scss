@@ -25,9 +25,64 @@ button,
   @include setBgColor(transparent,$gray-700);
   @include font($primaryFont,14,medium,normal,24);
   @include transitionsall;
+  @include breakpoint(desktop1024) {}
+  @include breakpoint(desktop1169) {}
+  @include breakpoint(desktop1100) {
+    padding: size(10) size(40);
+  }
+  @include breakpoint(desktop1200) {
+    padding: size(10) size(50);
+  }
   @include hover {
     @include setBgColor(darken(#fff, 10%), $gray-700);
     // border-color: transparent;
   }
 
+}
+.upload-btn{
+  padding: size(10) size(30);
+  display: inline-block;
+  @include border (solid,1,$primary);
+  @include setBgColor($primary,$white);
+  @include font($primaryFont,14,medium,normal,24);
+  @include transitionsall;
+  @include breakpoint(desktop1100) {
+    padding: size(10) size(40);
+  }
+  @include breakpoint(desktop1200) {
+    padding: size(10) size(50);
+  }
+  @include hover {
+    @include setBgColor(darken($primary, 10%), $white);
+  }
+}
+.live-btn-mobile{
+  padding: size(4);
+  @include breakpoint(mobile768) {
+    padding: size(8);
+    svg{
+      @include square(24);
+    }
+    @include hover{
+      svg{
+        path{
+          @include setBgColor (darken(#BD081C,50%), $white);
+        }
+      }
+    }
+  }
+}
+.upload-btn-mobile{
+  padding: size(4);
+  @include flex-center;
+  @include radius(1);
+  @include breakpoint(mobile768) {
+    padding: size(8);
+    svg{
+      @include square(24);
+    }
+  }
+  @include hover {
+    // @include setBgColor(darken($primary, 10%), $white);
+  }
 }
