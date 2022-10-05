@@ -2,10 +2,11 @@
 @use '../../partials' as *;
 
 .header{
-    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-bottom: 1px solid rgba(56, 152, 252, 0.2);
     padding:size(10) size(10);
     @include breakpoint (mobile768) {
     padding:size(10) size(32);
+    background-color: $gray-50;
       
     }
     @include breakpoint (tab992) {
@@ -41,6 +42,7 @@
 
         &-input {
             width: 100%;
+            background: $gray-50;
             @include breakpoint (tab992){
                 width: size(340);
             }

@@ -172,7 +172,7 @@ html:focus-within {
 }
 
 body {
-  background: hsl(0deg, 0%, 100%);
+  background: #F5F6F8;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -375,12 +375,63 @@ button:focus,
     height: 1.5rem;
   }
 }
+.total-card {
+  padding: 1.25rem 0rem 1.25rem 1.25rem;
+  min-width: 150px;
+}
+.total-card .card-icon {
+  width: 2.625rem;
+  height: 2.625rem;
+  background: #F1FAF1;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total-card .card-icon-2 {
+  background: #F4F2FE;
+}
+.total-card .card-icon-3 {
+  background: #F4F2FE;
+}
+.total-card .card-icon-4 {
+  background: #F1FAF1;
+}
+.total-card .card-icon-5 {
+  background: #E7ECFE;
+}
+.total-card .card-icon-6 {
+  background: #E7ECFE;
+}
+.total-card .total-title {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4285714286;
+  color: #718096;
+}
+.total-card .total-number {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1666666667;
+  color: #2D3748;
+}
+
 .header {
+  border-bottom: 1px solid rgba(56, 152, 252, 0.2);
   padding: 0.625rem 0.625rem;
 }
 @media screen and (min-width: 48rem) {
   .header {
     padding: 0.625rem 2rem;
+    background-color: #FAFAFA;
   }
 }
 @media screen and (min-width: 62rem) {
@@ -418,6 +469,7 @@ button:focus,
 }
 .header .searchgroup-input {
   width: 100%;
+  background: #FAFAFA;
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;

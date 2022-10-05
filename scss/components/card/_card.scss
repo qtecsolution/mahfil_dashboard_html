@@ -1,2 +1,38 @@
 @use '../../global' as *;
-@use '../../partials' as p;
+@use '../../partials' as *;
+.total-card{
+    padding: size(20) size(0) size(20) size(20);
+    min-width: 150px;
+    .card-icon{
+        @include square(42);
+        background: $cardIcon-1;
+        @include circle;
+        @include flex-center;
+        
+        svg{
+        }
+    }
+    .card-icon-2{
+        background: $cardIcon-2;
+    }
+    .card-icon-3{
+        background: $cardIcon-2;
+    }
+    .card-icon-4{
+        background: $cardIcon-4;
+    }
+    .card-icon-5{
+        background: $cardIcon-5;
+    }
+    .card-icon-6{
+        background: $cardIcon-6;
+    }
+    .total-title{
+        @include font($primaryFont,14,medium,normal,20);
+        color: $gray-600;
+    }
+    .total-number{
+        @include font($primaryFont,24,medium,normal,28);
+        color: $gray-800;
+    }
+}
