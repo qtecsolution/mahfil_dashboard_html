@@ -725,7 +725,7 @@ button:focus,
 .sidebarlist-link {
   color: #1A202C;
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: 0.625rem size;
 }
 
 .main .sidebar {
