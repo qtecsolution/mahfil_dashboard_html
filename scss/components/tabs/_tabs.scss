@@ -1,0 +1,17 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+.nav {
+    gap: size(20);
+}
+.nav-link {
+    padding: size(20) size(0);
+    color: $gray-600;
+}
+.nav-tabs .nav-link.active {
+    @include border-single(bottom,solid,3,$primary);
+    background: transparent;
+}
+
+.nav-tabs .nav-link { 
+    border: none;
+}

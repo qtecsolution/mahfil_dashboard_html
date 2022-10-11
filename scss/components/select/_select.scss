@@ -44,7 +44,7 @@
       @include border(solid, 1, $secondary);
       @include double-radius(bottom, left, 6, bottom, right, 6);
       @include radius(6);
-      background: $white;
+      background: $primary;
       @include transitionsall;
       opacity: 0;
       visibility: hidden;
@@ -69,14 +69,16 @@
         cursor: pointer;
         padding: size(8);
         @include transitionsall;
+        color: $white;
 
         &:hover {
           cursor: pointer;
-        //   @include setBgColor(lighten($labelText, 50%), $black);
+          @include setBgColor(darken($primary, 10%), $white);
         }
 
         &.selected {
-          @include setBgColor(lighten($green, 15%), $black);
+            @include setBgColor(darken($primary, 10%), $white);
+
         }
       }
     }

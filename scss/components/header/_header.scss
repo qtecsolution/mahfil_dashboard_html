@@ -44,10 +44,11 @@
         &-input {
             width: 100%;
             background: $gray-50;
+            font-weight: bold;
             @include breakpoint (tab992){
                 width: size(340);
             }
-            @include font($primaryFont, 14, normal, normal, 14);
+            @include font($primaryFont, 14, medium, normal, 14);
             padding: size(10) size(16);
             padding-left: size(30);
             @include radius(2);
@@ -61,7 +62,7 @@
             &:focus,
             &:hover {
                 outline: none;
-                border-color: #444;
+                border-color:$primary;
             }
 
             &::placeholder {
