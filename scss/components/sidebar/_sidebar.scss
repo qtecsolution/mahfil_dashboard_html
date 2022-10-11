@@ -5,7 +5,11 @@
     padding: size(10) size(0);
     position: sticky;
     top: size(76);
+    &-header {
+        
+    }
 }
+
 .sidebarlist{
 @include list-vertical;
 gap: size(5);

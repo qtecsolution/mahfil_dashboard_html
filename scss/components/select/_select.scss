@@ -41,10 +41,11 @@
       top: 100%;
       left: 0;
       right: 0;
-      @include border(solid, 1, $secondary);
+      box-shadow: 0 30px 30px rgba(0,0,0,.5);
+      
       @include double-radius(bottom, left, 6, bottom, right, 6);
       @include radius(6);
-      background: $primary;
+      background: $white;
       @include transitionsall;
       opacity: 0;
       visibility: hidden;
@@ -69,15 +70,15 @@
         cursor: pointer;
         padding: size(8);
         @include transitionsall;
-        color: $white;
+        color: $gray-800;
 
         &:hover {
           cursor: pointer;
-          @include setBgColor(darken($primary, 10%), $white);
+          @include setBgColor(darken($bodyBg, 10%), $gray-800);
         }
 
         &.selected {
-            @include setBgColor(darken($primary, 10%), $white);
+          @include setBgColor(darken($bodyBg, 10%), $gray-800);
 
         }
       }

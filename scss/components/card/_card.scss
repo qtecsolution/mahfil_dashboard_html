@@ -51,7 +51,7 @@
         @include radius (10);
         &-header {
             @include flex;
-            gap:size(4);
+            gap:size(6);
             align-items: center;
             .comment-image {
                 @include square (30);
@@ -63,9 +63,21 @@
                     
                 }
             }
+            .name {
+                color: $textDark2;
+                @include font ($primaryFont ,16,semibold,normal,20);
+            }
+            .time {
+                color: $gray-500;
+                @include font ($primaryFont ,16,medium,normal,20);
+            }
         }
         &-body {
             padding-left: size(30);
+            .comment-text{
+                color: $gray-800;
+                @include font($primaryFont,14,normal,normal,20);
+            }
         }
     }
 }

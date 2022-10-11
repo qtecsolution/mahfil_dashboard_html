@@ -40,3 +40,45 @@
         }
     }
 }
+
+
+.videolist {
+    @include list-vertical;
+    gap: size(12);
+    &-item {
+    @include border(solid,1,$gray-300);    
+    @include radius(10);
+    .single-video {
+        @include flex-between;
+        padding: size(10) size(30);
+        color: $gray-600;
+        @include transitionsbackground;
+        @include hover {
+            background-color: #f8f9fa;
+        }
+        .video-info {
+            @include flex-center-vert;
+            gap: size(10);
+            .thumb-image {
+                width: size(80);
+                height: size(40);
+                overflow: hidden;
+                @include radius (4);
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+            .video-name {
+                @include font($primaryFont,14,medium,normal,20);
+            }
+            .video-length {
+
+            }
+        }
+
+    }
+        
+    }
+}
