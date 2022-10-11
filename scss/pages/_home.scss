@@ -4,7 +4,7 @@
 .main {
     .sidebar{
         background-color: $white;
-        height: 100%;
+        height: calc(100vh - 76px);
         width: size(270);
     }
     .main-info{
@@ -42,8 +42,8 @@
                 }
             }
         }
-
-        .congratulation-sub{
+        // Congratulation and subscriber part
+        .congratulation-sub {
             .congratulation{
                 background-color: red;
                 background: url(../../assets/images/congratulation.svg) no-repeat;
@@ -90,6 +90,25 @@
             }
             &-body {
 
+            }
+        }
+
+        // view-comment
+        .view-comment {
+            .view {
+                background: $white;
+                @include h100;
+            }
+            // latest comment
+            .latest-comment {
+                background-color: $white;
+                @include h100;
+                padding: size(10);
+                &-content {
+                    @include flex-column;
+                    gap: size(20);
+
+                }
             }
         }
     }

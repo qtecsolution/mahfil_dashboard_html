@@ -7,13 +7,19 @@
     @include breakpoint (mobile768) {
     padding:size(10) size(32);
     background-color: $gray-50;
-    
+    background: $bodyBg;
+    background-color: red;
       
+    }
+    @include breakpoint (mobile360) {
+        background-color: $bodyBg;
+
     }
     @include breakpoint (tab992) {
         padding:size(10) size(48);
 
     }
+
     &-nav {
         // hambyrger
         .logo{

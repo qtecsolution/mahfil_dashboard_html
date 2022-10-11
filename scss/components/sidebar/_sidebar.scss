@@ -3,6 +3,8 @@
 @use '../../partials' as *;
 .sidebar {
     padding: size(10) size(0);
+    position: sticky;
+    top: size(76);
 }
 .sidebarlist{
 @include list-vertical;
@@ -25,10 +27,10 @@ gap: size(5);
        }
     }
     @include hover {
-        @include setBgColor(#e0f3ff,$primary);
+        @include setBgColor($primary,$white);
         svg{
             path{
-                fill: $primary;
+                fill: $white;
             }
         }
     }

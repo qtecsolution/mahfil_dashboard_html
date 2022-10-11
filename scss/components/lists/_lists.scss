@@ -4,7 +4,7 @@
 
 .subscriber-list {
     @include list-vertical;
-    gap: size(7);
+    gap: size(10);
     &-item {
         @include border (solid,1,$gray-400);
         @include radius(10);
@@ -12,7 +12,7 @@
         @include flex-center-between;
         .subscriber{
             @include flex-center;
-            gap: size(6);
+            gap: size(16);
 
             &-image{
                 @include square(24);

@@ -24,7 +24,7 @@
 
 <body class="">
   <!-- =========================HEADER START================================== -->
-  <header class="header">
+  <header class="header sticky-top">
     <div class="container-fluid">
       <nav class="header-nav d-flex justify-content-between align-items-center">
         <!-- hemburger -->
@@ -317,9 +317,9 @@
 
   <!-- MAIN SECTION START -->
   <section class="main ">
-    <div class="container-fluid d-flex justify-content-between gap-2">
+    <div class="container-fluid d-flex justify-content-between gap-2 ">
       <!-- sidebar -->
-      <div class="sidebar d-none d-lg-block">
+      <div class="sidebar  d-none d-lg-block">
         <div class="sidebar-content">
           <div class="sidebar-header">
             <!-- sidebar logo  -->
@@ -678,9 +678,10 @@
         <!-- view comment part -->
         <div class="view-comment">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
               <div class="view">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
+                 <div class="tab-items">
                   <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Views</button>
                   </li>
@@ -690,21 +691,85 @@
                   <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Reactions</button>
                   </li>
+                 </div>
+
+                 <select name="" id="">
+                  <option value="">2022</option>
+                  <option value="">2021</option>
+                  <option value="">2020</option>
+                  <option value="">2019</option>
+                  <option value="">2018</option>
+                  <option value="">2017</option>
+                  <option value="">2016</option>
+                 </select>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <canvas id="myChart"></canvas>
+                  </div>
                   <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
                   <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
                   <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
+              <div class="latest-comment">
+                <div class="latest-comment-content">
+                  <div class="latest-comment-header">
+                    <h3 class="latesy-title">Latest Coments</h3>
+                  </div>
+                  <div class="latest-comment-body">
+                    <div class="comment-cards">
 
+                      <div class="comment-card">
+                        <div class="comment-card-header">
+                          <figure class="comment-image">
+                            <img src="https://developer-kawsar.netlify.app/images/kawsar.png" alt="user">
+                          </figure>
+                          <span class="name">Likhon</span>
+                          <span class="time">1 hr. ago</span>
+                        </div>
+                        <div class="comment-card-body">
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                        </div>
+                      </div>
+                      <!-- <div class="comment-card">
+                        <div class="comment-card-header">
+                          <figure class="comment-image">
+                            <img src="https://developer-kawsar.netlify.app/images/kawsar.png" alt="user">
+                          </figure>
+                          <span class="name">Likhon</span>
+                          <span class="time">1 hr. ago</span>
+                        </div>
+                        <div class="comment-card-body">
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                        </div>
+                      </div> -->
+                      <div class="comment-card">
+                        <div class="comment-card-header">
+                          <figure class="comment-image">
+                            <img src="https://developer-kawsar.netlify.app/images/kawsar.png" alt="user">
+                          </figure>
+                          <span class="name">Likhon</span>
+                          <span class="time">1 hr. ago</span>
+                        </div>
+                        <div class="comment-card-body">
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  </div>
+              </div>
             </div>
           </div>
+          </div>
         </div>
-
       </div>
       <!-- main info -->
     </div>
@@ -712,15 +777,52 @@
   </section>
   <!-- MAIN SECTION END -->
 
-  <section>
-
-  </section>
+ 
 
 
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <!-- SELECT JS -->
-  <script src="assets/js/select/select.js"></script>i
+  <script src="assets/js/select/select.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script>
+  
+    const ctx = document.getElementById('myChart');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN' , 'JUL' , 'AUG' , 'SEP', 'OCT' , 'NOV' ,'DEC'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ]
+            // borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+  </script>
 
 </body>
 

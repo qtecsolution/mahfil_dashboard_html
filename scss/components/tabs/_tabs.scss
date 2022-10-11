@@ -2,16 +2,29 @@
 @use '../../partials' as *;
 .nav {
     gap: size(20);
+    padding-left: size(20);
+    @include flex-between;
+    padding-right: size(20);
 }
 .nav-link {
     padding: size(20) size(0);
     color: $gray-600;
+    @include font($primaryFont,14,medium,normal,20);
 }
 .nav-tabs .nav-link.active {
     @include border-single(bottom,solid,3,$primary);
+    color: $primary;
     background: transparent;
 }
 
 .nav-tabs .nav-link { 
     border: none;
+}
+.nav-tabs {
+   border: none;
+}
+
+.tab-items {
+    @include list-horizontal;
+    gap: size(20);
 }

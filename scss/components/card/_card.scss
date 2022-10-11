@@ -41,3 +41,31 @@
         color: $gray-800;
     }
 }
+
+.comment-cards {
+    @include flex-column;
+    gap: size(10);
+    .comment-card {
+        padding: size(20);
+        @include border(solid,1,$gray-400);
+        @include radius (10);
+        &-header {
+            @include flex;
+            gap:size(4);
+            align-items: center;
+            .comment-image {
+                @include square (30);
+                @include circle;
+               
+                img {
+                    @include wh100;
+                    @include circle;
+                    
+                }
+            }
+        }
+        &-body {
+            padding-left: size(30);
+        }
+    }
+}
