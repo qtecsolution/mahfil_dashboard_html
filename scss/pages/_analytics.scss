@@ -1,0 +1,24 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.analytics {
+    padding: size(20) size(0);
+    @include breakpoint (tab992) {
+        padding: size(36) size(0);
+    }
+    
+    &-content {
+        @include flex-column;
+        gap:size(18);
+    }
+    &-header {
+        @include flex-between;
+        .header-title {
+            color: $gray-800;
+            @include font($primaryFont,20,bold,normal,26);
+        }
+    }
+    &-body {
+
+    }
+}
