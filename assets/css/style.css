@@ -180,6 +180,9 @@ body {
   line-height: 1.5;
   margin: 0;
   text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -251,6 +254,10 @@ a:active {
 
 figure, picture, p, ul, ol {
   margin: 0;
+}
+
+footer {
+  margin-top: auto;
 }
 
 button,
@@ -1169,7 +1176,7 @@ select {
 
 .main .sidebar {
   background-color: hsl(0deg, 0%, 100%);
-  height: calc(100vh - 76px);
+  height: calc(100vh - 110px);
   width: 16.875rem;
 }
 .main .sidebar-header {
@@ -1418,22 +1425,27 @@ select {
   font-style: normal;
   line-height: 1.25;
 }
-.cse-container {
+.mahfil-container {
   margin-inline: auto;
   width: 100%;
 }
 @media screen and (min-width: 36rem) {
-  .cse-container {
+  .mahfil-container {
     max-width: 33.75rem;
   }
 }
 @media screen and (min-width: 48rem) {
-  .cse-container {
+  .mahfil-container {
     max-width: 45rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .cse-container {
+  .mahfil-container {
     max-width: 60rem;
   }
+}
+
+.container-fluid {
+  max-width: 1440px;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

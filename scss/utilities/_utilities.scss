@@ -1,19 +1,24 @@
 @use '../global' as *;
-@use '../partials' as p;
+@use '../partials' as *;
 
-.cse-container {
+.mahfil-container {
   margin-inline: auto;
-  @include p.w100;
+  @include w100;
 
-  @include p.breakpoint(mobile576) {
-    max-width: p.size(540);
+  @include breakpoint(mobile576) {
+    max-width: size(540);
   }
 
-  @include p.breakpoint(mobile768) {
-    max-width: p.size(720);
+  @include breakpoint(mobile768) {
+    max-width: size(720);
   }
 
-  @include p.breakpoint(tab992) {
-    max-width: p.size(960);
+  @include breakpoint(tab992) {
+    max-width: size(960);
   }
+}
+
+.container-fluid {
+  max-width: 1440px;
+  margin: auto;
 }
