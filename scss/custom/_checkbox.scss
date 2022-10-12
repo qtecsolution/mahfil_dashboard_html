@@ -1,58 +1,59 @@
 @use '../global' as *;
-@use '../partials' as p;
+@use '../partials' as *;
 
 
-// .customcheck {
-//   &-box {
-//     &:checked ~ .customcheck-label {
-//       &::before {
-//         background: $primary;
-//         border-color: $primary;
-//       }
+.customcheck {
+    @include flex-center;
+  &-box {
+    &:checked ~ .customcheck-label {
+      &::before {
+        background: $primary;
+        border-color: $primary;
+      }
 
-//       &::after {
-//         opacity: 1;
-//         visibility: visible;
-//       }
-//     }
-//   }
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 
-//   &-label {
-//     position: relative;
-//     color: $textPrimary;
-//     font: inherit;
-//     padding-left: p.size(26);
-//     cursor: pointer;
+  &-label {
+    position: relative;
+    color: $primary;
+    font: inherit;
+    padding-left: size(16);
+    cursor: pointer;
 
-//     &::before,
-//     &::after {
-//       content: '';
-//       @include p.absolute(top 50% left 0);
-//     }
+    &::before,
+    &::after {
+      content: '';
+      @include absolute(top 50% left 0);
+    }
 
-//     &::before {
-//       @include p.square(18);
-//       @include p.radius(4);
-//       @include p.border(solid, 1, $checkborder);
-//       @include p.translateY(-50%);
-//       @include p.transitionsall;
-//     }
+    &::before {
+      @include square(18);
+      @include radius(4);
+      @include border(solid, 1,  #BCB3E2);
+      @include translateY(-50%);
+      @include transitionsall;
+    }
 
-//     &::after {
-//       width: p.size(5);
-//       height: p.size(10);
-//       @include p.border(solid, 1.5, $white);
-//       border-top: 0;
-//       border-left: 0;
-//       left: p.size(7);
-//       @include p.transform(translateY(-70%) rotate(45deg));
-//       opacity: 0;
-//       visibility: hidden;
-//       @include p.transitionsall;
-//     }
+    &::after {
+      width: size(5);
+      height: size(10);
+      @include border(solid, 2, $white);
+      border-top: 0;
+      border-left: 0;
+      left: size(7);
+      @include transform(translateY(-70%) rotate(45deg));
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
 
-//     &::selection {
-//       @include p.setBgColor(transparent, $textPrimary);
-//     }
-//   }
-// }
+    &::selection {
+      @include setBgColor(transparent, tan);
+    }
+  }
+}

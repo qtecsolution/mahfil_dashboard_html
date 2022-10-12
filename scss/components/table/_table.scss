@@ -1,0 +1,71 @@
+@use '../../global'as *;
+@use '../../partials'as *;
+
+
+
+table.table {
+	tr {
+		&:first-child {
+            background-color: red;
+        }
+        th {
+            // border-color: green; 
+            padding:size(16) size(12);
+            vertical-align: middle;
+            min-width: size(160);
+            background-color:$tableHeader;
+            color: $tableText;
+            @include font($primaryFont,12,semibold,normal,16);
+            text-transform: uppercase;
+            letter-spacing: 0.06rem;
+            box-shadow: inset 0px -1px 0px #EDF2F7;
+            &:first-child {
+               width: 30px;
+               min-width: 10px;
+               padding: 0;
+            }
+            &:last-child {
+                min-width: size(60);
+            }
+        }
+        
+        td {
+            border-color: #EDF2F7; 
+            vertical-align: middle;
+            background-color: $white;
+            @include font($primaryFont,14,normal,normal,20);
+            padding:size(20) size(12);
+            color: $gray-600;
+            &:nth-child(2) {
+                min-width: 200px;
+                padding: 0;
+                a{
+                    @include flex-center-vert;
+                    color: $tableText2;
+                    height:100%;
+                    @include font($primaryFont,12,semibold,normal,20);
+                }
+            }
+        }
+	}
+}
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+table.table .avatar {
+border-radius: 50%;
+vertical-align: middle;
+margin-right: 10px;
+width: 50px;
+}
