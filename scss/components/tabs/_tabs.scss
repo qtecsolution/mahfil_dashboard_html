@@ -1,10 +1,16 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 .nav {
-    gap: size(20);
-    padding-left: size(20);
+   
     @include flex-between;
-    padding-right: size(20);
+    padding-left: size(10);
+    padding-right: size(10);
+   
+    @include breakpoint(mobile414) {
+        gap: size(20);
+        padding-left: size(20);
+        padding-right: size(20);
+    }
 }
 .nav-link {
     padding: size(20) size(0);
@@ -26,5 +32,15 @@
 
 .tab-items {
     @include list-horizontal;
-    gap: size(20);
+    gap: size(10);
+    @include breakpoint(mobile414) {
+        gap: size(20);
+    }
+
+}
+
+select {
+   @include border(solid,0.519367,$gray-300);
+   @include radius(16);
+   padding: size(2) size(4);
 }

@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="">
+<body>
   <!-- =========================HEADER START================================== -->
   <header class="header sticky-top">
     <div class="container-fluid">
@@ -52,9 +52,37 @@
           <!-- MOBILE-MENU -->
           <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
             <div class="offcanvas-header">
-              <a href="index.html" class="logo">
-                <img src="assets/images/logo/logo.png" alt="logo">
-              </a>
+             <div class="logo-dropdown">
+                <!-- sidebar logo  -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo/logo.png" alt="logo">
+            </a>
+            <!-- channerl dropdown  -->
+            <div class="customselect">
+              <div class="select-wrapper">
+                <div class="select">
+                  <div class="select-trigger">
+                    <span class="selectedvalue">Channel 1</span>
+
+                    <span class="arrow">
+                      <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.21899 8.375L0.218994 2.375L1.61899 0.975L6.21899 5.575L10.819 0.975L12.219 2.375L6.21899 8.375Z" fill="#4B4B4C"/>
+                    </svg>
+                        
+                    </span>
+                  </div>
+                  
+                  <div class="custom-options">
+                    <span class="custom-option selected" data-value="channel-1">Channel 1</span>
+                    <span class="custom-option" data-value="Channel-2">Channel 2</span>
+                    <span class="custom-option" data-value="channel-3">Channel 3</span>
+                    <span class="custom-option" data-value="channel-4">Channe 4</span>
+                    <span class="custom-option" data-value="channel-5">Channel 5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+             </div>
 
               <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -679,7 +707,7 @@
         <div class="view-comment">
           <div class="row">
             <div class="col-lg-7 ">
-              <div class="view">
+              <div class="view h-100">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                  <div class="tab-items">
                   <li class="nav-item" role="presentation">
@@ -704,12 +732,34 @@
                  </select>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                    <canvas id="myChart"></canvas>
+                  <div class="tab-pane fade show active py-2" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="graph h-100 p-2">
+                      <figure>
+                        <img src="assets/images/graph.svg" class="img-fluid" alt="graph">
+                      </figure>
+                    </div>
                   </div>
-                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-                  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
-                  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="graph h-100 p-2">
+                      <figure>
+                        <img src="assets/images/graph.svg" class="img-fluid" alt="graph">
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <div class="graph h-100 p-2">
+                      <figure>
+                        <img src="assets/images/graph.svg" class="img-fluid" alt="graph">
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                    <div class="graph h-100 p-2">
+                      <figure>
+                        <img src="assets/images/graph.svg" class="img-fluid" alt="graph">
+                      </figure>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
