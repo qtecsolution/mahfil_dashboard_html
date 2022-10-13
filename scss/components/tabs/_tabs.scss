@@ -61,10 +61,14 @@ select {
             padding-right: size(20);
         }
     }
+    .nav-tabs {
+       border: 0;
+       padding: 0;
+    }
 
     .tab-items {
         @include list-horizontal;
-        gap: size(10);
+        gap: size(0);
         @include breakpoint(mobile414) {
             gap: size(20);
         }
@@ -75,6 +79,7 @@ select {
         @include flex-between;
         padding: size(20);
         gap:size(30);
+        @include radius(0);
         .views {
             @include flex-column;
             text-align: left;
@@ -90,5 +95,13 @@ select {
         .icon {
 
         }
+    }
+    .nav-tabs .nav-link.active {
+        @include border-single(top,solid,3,$primary);
+        color: $primary;
+        background: $white;
+    }
+    .tab-content {
+        background-color: $white;
     }
 }
